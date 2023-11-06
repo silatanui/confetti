@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles-engine/2.12.0/tsparticles.engine.min.js" ></script> 
+<title></title>
+</head>
+<body>
+    <div id="tsparticles"></div>
+
+    <script>
+        tsParticles
+  .load({
+    id: "tsparticles",
+    url: "presets/default.json",
+  })
+  .then((container) => {
+    console.log("callback - tsparticles config loaded");
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+//or
+
+tsParticles.load({
+  id: "tsparticles",
+  options: {
+    /* options here */
+  },
+});
+
+//or
+
+tsParticles.load({
+  id: "tsparticles",
+  options: [
+    {
+      /* options here */
+    },
+    {
+      /* other options here */
+    },
+  ],
+});
+//random object
+
+tsParticles.load({
+  id: "tsparticles",
+  options: [
+    {
+      /* options here */
+    },
+    {
+      /* other options here */
+    },
+  ],
+  index: 1,
+}); //the second one
+// Important! If the index is not in range 0...<array.length, the index will be ignored.
+
+// after initialization this can be used.
+
+/* tsParticles.setOnClickHandler(@callback); */
+
+/* this will be fired from all particles loaded */
+
+tsParticles.setOnClickHandler((event, particles) => {
+  /* custom on click handler */
+});
+
+// now you can control the animations too, it's possible to pause and resume the animations
+// these methods don't change the config so you're safe with all your configurations
+// domItem(0) returns the first tsParticles instance loaded in the dom
+const particles = tsParticles.domItem(0);
+
+// play will start the animations, if the move is not enabled it won't enable it, it just updates the frame
+particles.play();
+
+// pause will stop the animations
+particles.pause();
+    </script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>

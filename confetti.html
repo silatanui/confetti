@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+<title>Confetti</title>
+</head>
+<style>
+    *{
+        font-family: poppins;
+        padding: 0px;
+        margin: 0px;
+    }
+    .box{
+        width: 100%;
+        height:40vh;
+        background-color: darkgreen;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    form{
+        background-color: white;
+        display: flex;
+        width: 850px;
+        padding:10px;
+        align-items: center;
+        justify-content: center;
+    }
+    h1{
+        color: orange;
+
+    }
+
+</style>
+<body>
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #e3f2fd;box-shadow: 0px 1px 10px gray">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="#">Action 1</a>
+                    <a class="dropdown-item" href="#">Action 2</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<div class="jumbotron mt-0">
+   <div class="box text-light" id="canvas" onmouseenter="showConfetti()">
+    <h1>Celebrating 1000 minutes of Coding</h1>
+        <h2>Search Template</h2>
+
+        <form action="" method="post">
+            <input type="text" name="" id="" class="form-control" placeholder="Enter the template name.." style="width: 60%;">
+            <label for="" style="color: black; width:100px;" class="ml-2">Number:</label>
+            <select class="form-control" name="" id="" style="width: 80px;">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+
+            <button type="button" class="btn btn-primary ml-4">Search Item</button>
+        </form>
+   </div>
+</div>
+
+<script>
+function showConfetti(){
+    var myCanvas = document.getElementById('canvas');
+    
+  
+    confetti({
+      particleCount: 100,
+      spread: 110
+      // any other options from the global
+      // confetti function
+    });
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>

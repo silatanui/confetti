@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <button id="confettiButton" class="btn btn-primary" onmouseenter="displayConfetti()">Hover Me for Confetti</button>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
+    <script>
+        confettiButton.addEventListener('mouseenter', () => {
+            
+            confetti({
+                particleCount: 100,
+                startVelocity: 30,
+                spread: 360,
+                origin: {
+                  x: Math.random(),
+                  // since they fall down, start a bit higher than random
+                  y: Math.random() - 0.2
+                }
+            });
+        });
+    </script>
+</body>
+</html>
